@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TechStdFOODYRestaurent</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h2 class="logo">TechStdFOODYRestaurent</h2>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="cart">
+      🛒 Cart: <span id="cart-count">0</span>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Fresh Food Delivered Fast</h1>
+
+      <p>
+        Delicious meals, premium quality ingredients,
+        and quick delivery to your doorstep.
+      </p>
+
+      <a href="#menu">
+        <button>Explore Menu</button>
+      </a>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <!-- MENU -->
+
+<section class="menu-section" id="menu">
+
+  <h2>Authentic Telugu Food Menu</h2>
+
+  <div class="menu-container">
+
+    <!-- Biryani -->
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1701579231305-d84d8af9a3fd?q=80&w=1200&auto=format&fit=crop">
+
+      <h3>Hyderabadi Dum Biryani</h3>
+
+      <p>
+        Traditional spicy Telugu-style chicken biryani with rich flavors.
+      </p>
+
+      <span>₹349</span>
+
+      <button onclick="addToCart('Hyderabadi Dum Biryani')">
+        Add to Cart
+      </button>
+    </div>
+
+    <!-- Pesarattu -->
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?q=80&w=1200&auto=format&fit=crop">
+
+      <h3>Pesarattu</h3>
+
+      <p>
+        Crispy green gram dosa served with ginger chutney.
+      </p>
+
+      <span>₹149</span>
+
+      <button onclick="addToCart('Pesarattu')">
+        Add to Cart
+      </button>
+    </div>
+
+    <!-- Gongura Mutton -->
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?q=80&w=1200&auto=format&fit=crop">
+
+      <h3>Gongura Mutton</h3>
+
+      <p>
+        Andhra-style spicy mutton cooked with gongura leaves.
+      </p>
+
+      <span>₹399</span>
+
+      <button onclick="addToCart('Gongura Mutton')">
+        Add to Cart
+      </button>
+    </div>
+
+    <!-- Pulihora -->
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=1200&auto=format&fit=crop">
+      <h3>Pulihora</h3>
+
+      <p>
+        Authentic tamarind rice with peanuts and Telugu spices.
+      </p>
+
+      <span>₹129</span>
+
+      <button onclick="addToCart('Pulihora')">
+        Add to Cart
+      </button>
+    </div>
+    
+    <!-- Apricot Delight -->
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?q=80&w=1200&auto=format&fit=crop">
+
+      <h3>Qubani Ka Meetha</h3>
+
+      <p>
+        Hyderabadi apricot dessert served with fresh cream.
+      </p>
+
+      <span>₹179</span>
+
+      <button onclick="addToCart('Qubani Ka Meetha')">
+        Add to Cart
+      </button>
+    </div>
+
+    <!-- Double Ka Meetha -->
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?q=80&w=1200&auto=format&fit=crop">
+      <h3>Double Ka Meetha</h3>
+
+      <p>
+        Rich bread pudding dessert with dry fruits and saffron.
+      </p>
+
+      <span>₹159</span>
+
+      <button onclick="addToCart('Double Ka Meetha')">
+        Add to Cart
+      </button>
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <h2>About Us</h2>
+
+    <p>
+      TechStdFOODYRestaurent provides high-quality meals with
+      fast delivery and excellent customer service.
+    </p>
+  </section>
+
+  
+  <!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+  <h2>Contact TechStdFOODYRestaurent</h2>
+
+  <div class="contact-info">
+
+    <p>📞 Phone: +91 94903 26323</p>
+
+    <p>📧 Email: techstdfoody@gmail.com</p>
+
+    <p>📍 Location: Andhra Pradesh, India</p>
+
+  </div>
+
+  <!-- FORM -->
+
+  <form
+    action="https://formsubmit.co/techstdfoody@gmail.com"
+    method="POST"
+  >
+
+    <!-- Disable captcha -->
+
+    <input type="hidden" name="_captcha" value="false">
+
+    <!-- Email subject -->
+
+    <input
+      type="hidden"
+      name="_subject"
+      value="New Customer Message!"
+    >
+
+    <!-- Redirect after submit -->
+
+    <input
+      type="hidden"
+      name="_next"
+      value="https://vishal326323-lab.github.io/Project2/"
+    >
+
+    <input
+      type="text"
+      name="name"
+      placeholder="Your Name"
+      required
+    >
+
+    <input
+      type="email"
+      name="email"
+      placeholder="Your Email"
+      required
+    >
+
+    <textarea
+      name="message"
+      placeholder="Your Message"
+      required
+    ></textarea>
+
+    <button type="submit">
+      Send Message
+    </button>
+
+  </form>
+
+</section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 TechStdFOODYRestaurent. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
