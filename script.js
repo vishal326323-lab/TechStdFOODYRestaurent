@@ -4,6 +4,7 @@ let cartItems = [];
 
 // Function to add items to cart
 function addToCart(itemName) {
+
   cartCount++;
   cartItems.push(itemName);
 
