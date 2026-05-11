@@ -15,20 +15,33 @@ function addToCart(itemName) {
 }
 
 /* CONTACT FORM */
-document
-  .getElementById("contact-form")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
+// Just show the popup
+      document.addEventListener("DOMContentLoaded", function() {
+      const form = document.getElementById("contact-form");
 
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
-    let message = document.getElementById("message").value;
+      form.addEventListener("submit", function(event) {
+        event.preventDefault();
 
-    if (name === "" || email === "" || message === "") {
-      alert("Please fill all fields");
-      return;
-    }
+        let name = document.getElementById("name").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let message = document.getElementById("message").value.trim();
 
-    alert("Message sent successfully!");
-    document.getElementById("contact-form").reset();
-  });
+        if (name === "" || email === "" || message === "") {
+          Swal.fire({
+            icon: "warning",
+            title: "Oops...",
+            text: "Please fill all fields!"
+          });
+          return;
+        }
+
+        Swal.fire({
+          icon: "success",
+          title: "Message sent successfully!",
+          showConfirmButton: false,
+          timer: 2000
+        });
+
+        form.reset();
+      });
+    });
